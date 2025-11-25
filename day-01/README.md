@@ -1,6 +1,10 @@
-## Task requirements:
+## Task requirements
 
 For Day 1 – creating a key pair in AWS with name `devops-kp` and type `rsa`, we can do it in multiple ways: AWS Management Console, AWS CLI, or Terraform. Since it’s a practice task, the CLI approach is fastest and most common.
+
+### Purpose
+
+A key pair, consisting of a public key and a private key, is a set of security credentials that we use to prove our identity when connecting to an Amazon EC2 instance. For Linux instances, the private key allows us to securely SSH into our instance.
 
 ### Using AWS CLI
 

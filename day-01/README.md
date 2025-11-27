@@ -2,11 +2,11 @@
 
 For Day 1 – creating a key pair in AWS with name `devops-kp` and type `rsa`, we can do it in multiple ways: AWS Management Console, AWS CLI, or Terraform. Since it’s a practice task, the CLI approach is fastest and most common.
 
-### Purpose
+## Purpose
 
 A key pair, consisting of a public key and a private key, is a set of security credentials that we use to prove our identity when connecting to an Amazon EC2 instance. For Linux instances, the private key allows us to securely SSH into our instance.
 
-### Using AWS CLI
+## Using AWS CLI
 
 - Open the terminal where AWS CLI is configured with the credentials.
 - Then, Run this command:
@@ -25,7 +25,7 @@ aws ec2 create-key-pair \
 chmod 400 devops-kp.pem
 ```
 
-### Verify the key pair exists in the AWS account
+## Verify the key pair exists in the AWS account
 
 ```bash
 aws ec2 describe-key-pairs --key-names devops-kp

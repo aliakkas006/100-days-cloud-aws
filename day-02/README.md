@@ -20,7 +20,7 @@ The security group must be created inside the `default VPC` only.
 
 ---
 
-### Purpose
+## Purpose
 
 A security group controls the traffic that is allowed to reach and leave the resources that it is associated with. For example, after we associate a security group with an EC2 instance, it controls the inbound and outbound traffic for the instance.
 
@@ -29,7 +29,7 @@ When we create a VPC, it comes with a default security group. We can create addi
 
 ---
 
-### Using AWS CLI
+## Using AWS CLI
 
 - Get the Default VPC ID:
 

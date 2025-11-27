@@ -1,6 +1,6 @@
 ## Task requirements
 
-For Day 2 – creating a new subnet inside the default VPC with the following requirement:
+For Day 3 – creating a new subnet inside the default VPC with the following requirement:
 
 - Subnet Name: `xfusion-subnet`
 - No other parameters (like CIDR, AZ, etc.) are specified in the task.

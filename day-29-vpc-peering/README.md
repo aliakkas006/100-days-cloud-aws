@@ -19,7 +19,7 @@
   - Accepter VPC: `datacenter-private-vpc`
 
 - Accept the Peering:
-  - peering connection → Click Actions → Accept request
+  - Peering connection → Click Actions → Accept request
 
 ✔ Status become Active
 
@@ -30,9 +30,8 @@
   - Routes → Edit routes
 
 ```bash
-| Destination | Target             |
-| ----------- | ------------------ |
-| 10.1.0.0/16 | Peering connection |
+Destination  Target
+10.1.0.0/16  Peering connection
 ```
 
 - **Private VPC Route Table**:
@@ -40,9 +39,8 @@
   - Routes → Edit routes
 
 ```bash
-| Destination   | Target             |
-| ------------- | ------------------ |
-| 172.31.0.0/16 | Peering connection |
+Destination    Target
+172.31.0.0/16  Peering connection
 ```
 
 ### Step 4: Update Security Groups
@@ -51,18 +49,16 @@
 - Add inbound rules:
 
 ```bash
-| Type | Protocol | Source                                 |
-| ---- | -------- | -------------------------------------- |
-| ICMP | All      | Default VPC CIDR (e.g., 172.31.0.0/16) |
-| SSH  | TCP 22   | Default VPC CIDR                       |
+Type  Protocol  Source
+ICMP  All       Default VPC CIDR (e.g., 172.31.0.0/16)
+SSH   TCP 22    Default VPC CIDR
 ```
 
-- **:Public EC2 Security Group**: (for SSH from aws-client)
+- **Public EC2 Security Group**: (for SSH from aws-client)
 
 ```bash
-| Type | Port | Source                                    |
-| ---- | ---- | ----------------------------------------- |
-| SSH  | 22   | Your IP (or 0.0.0.0/0 if required by lab) |
+Type  Port  Source
+SSH   22    My IP (or 0.0.0.0/0 required by lab)
 ```
 
 ### Step 5: Setup SSH Access (aws-client → public EC2)
@@ -89,13 +85,13 @@ chown -R ec2-user:ec2-user /home/ec2-user/.ssh
 - SSH into public EC2:
 
 ```bash
-ssh ec2-user@<PUBLIC-EC2-IP>
+ssh ec2-user@54.232.200.77
 ```
 
 - Ping private EC2:
 
 ```bash
-ping <PRIVATE-EC2-IP>
+ping 10.0.2.17
 ```
 
 ### Final Architecture

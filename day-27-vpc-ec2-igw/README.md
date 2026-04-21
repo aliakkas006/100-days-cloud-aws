@@ -49,7 +49,7 @@ Select route table → Routes → Edit
 
 - Add:
 
-```bash Destination	Target
+```bash Destination  Target
 0.0.0.0/0	Internet Gateway (devops-igw)
 ```
 
